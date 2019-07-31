@@ -37,12 +37,15 @@ A repository to keep all the projects that implemented from individual students 
     18.	Leave a comment, that you are from udacity’s facebook challenge
     19.	We will review your files and we will accept the request if everything is ok. If not, we will let you know the reason your request is rejected
     20.	DONE!
+
+
 4.	Optional – Star the repo
     1.	Open your browser
     2.	Go to https://github.com/kkech/UdacityOpenSource.git
     3.	Press the start at the upper right corner
     4.	DONE!
 
+Furthermore, I made a video demonstrating the whole process of uploading my project to GitHub. You can find the video [here](https://youtu.be/6UUci4sQfys).
 
 If you want any help you can contact me directly in slack. My slack name is kkech.
 
