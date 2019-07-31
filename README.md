@@ -4,54 +4,49 @@
 A repository to keep all the projects that implemented from individual students or study groups during Secure and Private AI Scholarship Challenge from Facebook.
 
 ### How to upload your project to Udacity Showcase
-1.	Make a github account.
-a.	Open your browser
-b.	Go to https://github.com/
-c.	Press Sign Up
-d.	Follow the instructions
-e.	Verify your email address
-f.	DONE!
-
-2.	Download Git
-a.	Open your browser
-b.	Go to https://git-scm.com/downloads
-c.	Follow the instructions
-d.	DONE!
-
-3.	Upload your project
-a.	Make sure that you have already competed steps 1,2.
-b.	Make a folder with the name that use in slack
-c.	Copy all the files and folders that you want to upload inside that folder
-d.	Open terminal
-e.	Navigate to downloads folder in your terminal: cd /path/to/downloads
-f.	Clone the project: git clone https://github.com/kkech/UdacityOpenSource.git
-g.	Go inside the folder that created from git clone command: cd UdacityOpenSource
-h.	Copy the folder with your name that you created in step 1 to the UdacityOpenSource folder. You can do this through UI. The UdacityOpenSource folder that created with git clone command is located in your Downloads folder
-i.	Go to terminal again
-j.	Then make a new branch with the name that use in slack: git checkout -b [slackName]
-k.	Add all the new files: git add –-all
-l.	Commit your changed: git commit -m "Upload my files"
-m.	Upload your changes to the repo: git push origin [slackName]. If ask for your credentials, add your github account credentials.
-n.	Open your browser
-o.	Go to https://github.com/kkech/UdacityOpenSource
-p.	Press New pull request
-q.	Select as base the master and as compare your branch. Your branch will be named as your slackName.
-r.	Leave a comment, that you are from udacity facebook challenge
-s.	We will review your files and we will accept the request if everything is ok. If is not, we will let you know the reason your request is rejected
-t.	DONE!
-
+1. Make a github account.
+    1. Open your browser
+    2. Go to https://github.com/
+    3. Press Sign Up
+    4. Follow the instructions
+    5. Verify your email address
+    6. DONE!
+2. Download Git
+    1. Open your browser
+    2. Go to https://git-scm.com/downloads
+    3. Follow the instructions
+    4. DONE!
+3. Upload your project
+    1.	Make sure that you have already competed steps 1,2.
+    2.	Make a folder with the name that is used in slack
+    3.	Copy all the files and folders that you want to upload inside that folder
+    4.	Open terminal
+    5.	Navigate to the downloads folder in your terminal: cd /path/to/downloads
+    6.	Clone the project: git clone https://github.com/kkech/UdacityOpenSource.git
+    7.	Go inside the folder that is created from the git clone command: cd UdacityOpenSource
+    8.	Copy the folder with your name that you created in step 1 to the UdacityOpenSource folder. You can do this through UI. The UdacityOpenSource folder that is created with git clone command is located in your Downloads folder
+    9.	Go to the terminal again
+    10.	Then make a new branch with the name that is used in slack: git checkout -b [slackName]
+    11.	Add all the new files: git add –-all
+    12.	Commit your changes: git commit -m "Upload my files"
+    13.	Upload your changes to the repo: git push origin [slackName]. If you are asked for your credentials, add your github account credentials.
+    14.	Open your browser
+    15.	Go to https://github.com/kkech/UdacityOpenSource
+    16.	Press New pull request
+    17.	Select as base the master and as compare your branch. Your branch will be named as your slackName.
+    18.	Leave a comment, that you are from udacity’s facebook challenge
+    19.	We will review your files and we will accept the request if everything is ok. If not, we will let you know the reason your request is rejected
+    20.	DONE!
 4.	Optional – Star the repo
-a.	Open your browser
-b.	Go to https://github.com/kkech/UdacityOpenSource.git
-c.	Press the star at the upper right corner
-d.	DONE!
+    1.	Open your browser
+    2.	Go to https://github.com/kkech/UdacityOpenSource.git
+    3.	Press the start at the upper right corner
+    4.	DONE!
+
 
 If you want any help you can contact me directly in slack. My slack name is kkech.
 
-
 ### Contributors
-
-Kechagias Konstantinos
 
 | Name | Slack |
 | ------ | ------ |
