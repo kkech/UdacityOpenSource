@@ -18,13 +18,14 @@ A repository to keep all the projects that implemented from individual students 
     4. DONE!
 3. Upload your project
     1.	Make sure that you have already competed steps 1,2.
-    2.	Make a folder with the name that is used in slack
-    3.	Copy all the files and folders that you want to upload inside that folder
-    4.	Open terminal
-    5.	Navigate to the downloads folder in your terminal: cd /path/to/downloads
-    6.	Clone the project: git clone https://github.com/kkech/UdacityOpenSource.git
-    7.	Go inside the folder that is created from the git clone command: cd UdacityOpenSource
-    8.	Copy the folder with your name that you created in step 1 to the UdacityOpenSource folder. You can do this through UI. The UdacityOpenSource folder that is created with git clone command is located in your Downloads folder
+    2.  Fork the repo in your Github account.
+    3.	Make a folder with the name that is used in slack
+    4.	Copy all the files and folders that you want to upload inside that folder
+    5.	Open terminal
+    6.	Navigate to the downloads folder in your terminal: cd /path/to/downloads
+    7.	Clone the project: git clone https://github.com/kkech/UdacityOpenSource.git
+    8.	Go inside the folder that is created from the git clone command: cd UdacityOpenSource
+    9.	Copy the folder with your name that you created in step 1 to the UdacityOpenSource folder. You can do this through UI. The UdacityOpenSource folder that is created with git clone command is located in your Downloads folder
     9.	Go to the terminal again
     10.	Then make a new branch with the name that is used in slack: git checkout -b [slackName]
     11.	Add all the new files: git add –-all
