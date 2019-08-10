@@ -19,7 +19,7 @@ A repository to keep all the projects that implemented from individual students 
 3. Upload your project
     1.	Make sure that you have already competed steps 1,2.
     2.  Open your browser
-    3.  Navigate to https://github.com/aksht94/UdacityOpenSource.git
+    3.  Navigate to https://github.com/aksht94/UdacityOpenSource
     4.  Fork the repo
     5. Close the browser
     6.	Make a folder with the name that is used in slack
