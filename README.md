@@ -53,6 +53,21 @@ Furthermore, I made a video demonstrating the whole process of uploading my proj
 
 If you want any help you can contact me directly in slack. My slack name is kkech.
 
+### Help
+
+If you face any problem in the process, you can ask for help from us.
+
+| Name | Slack Name |
+| ------ | ------ |
+| Kechagias Konstantinos | kkech |
+| Shanmugapriya | Shanmugapriya |
+| cibaca | cibaca |
+| Mohona | Mohona |
+| Sajjad Manal | Sajjad Manal |
+| Apoorva Patil | Apoorva Patil |
+| Soumia | Soumia |
+
+
 ### Contributors
 
 | Name | Slack |
