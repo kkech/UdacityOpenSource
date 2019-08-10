@@ -61,6 +61,7 @@ If you face any problem in the process, you can ask for help from us.
 | ------ | ------ |
 | Kechagias Konstantinos | kkech |
 | Shanmugapriya | Shanmugapriya |
+| Archit | Archit |
 | cibaca | cibaca |
 | Mohona | Mohona |
 | Sajjad Manal | Sajjad Manal |
