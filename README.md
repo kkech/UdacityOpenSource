@@ -19,7 +19,7 @@ A repository to keep all the projects that implemented from individual students 
 3. Upload your project
     1.	Make sure that you have already competed steps 1,2.
     2.  Open your browser
-    3.  Navigate to https://github.com/kkech/UdacityOpenSource
+    3.  Navigate to https://github.com/aksht94/UdacityOpenSource.git
     4.  Fork the repo
     5. Close the browser
     6.	Make a folder with the name that is used in slack
@@ -37,7 +37,7 @@ A repository to keep all the projects that implemented from individual students 
     18.	Open your browser
     19.	Go to https://github.com/[yourGitHubName]/UdacityOpenSource
     20.	Press New pull request
-    21.	Select as base repository kkech/UdacityOpenSource and as base master.As head repository select [yourGitHubName]/UdacityOpenSource and as compare your branch. Your branch will be named as your slackName.
+    21.	Select as base repository aksht94/UdacityOpenSource and as base master.As head repository select [yourGitHubName]/UdacityOpenSource and as compare your branch. Your branch will be named as your slackName.
     22.	Leave a comment, that you are from udacity’s facebook challenge
     23.	We will review your files and we will accept the request if everything is ok. If not, we will let you know the reason your request is rejected
     24.	DONE!
@@ -45,7 +45,7 @@ A repository to keep all the projects that implemented from individual students 
 
 4.	Optional – Star the repo
     1.	Open your browser
-    2.	Go to https://github.com/kkech/UdacityOpenSource.git
+    2.	Go to https://github.com/aksht94/UdacityOpenSource.git
     3.	Press the start at the upper right corner
     4.	DONE!
 
