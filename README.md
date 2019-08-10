@@ -49,7 +49,7 @@ A repository to keep all the projects that implemented from individual students 
     3.	Press the start at the upper right corner
     4.	DONE!
 
-Furthermore, I made a video demonstrating the whole process of uploading my project to GitHub. You can find the video [here](https://youtu.be/6UUci4sQfys).
+Furthermore, I made a video demonstrating the whole process of uploading my project to GitHub. You can find the video [here](https://youtu.be/FwjrbVqdZyE).
 
 If you want any help you can contact me directly in slack. My slack name is kkech.
 
