@@ -67,6 +67,7 @@ If you face any problem in the process, you can ask for help from us.
 | Sajjad Manal | Sajjad Manal |
 | Apoorva Patil | Apoorva Patil |
 | Soumia | Soumia |
+| Calincan Mircea Ioan | Calincan Mircea Ioan  |
 
 
 ### Contributors
