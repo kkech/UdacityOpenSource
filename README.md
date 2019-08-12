@@ -22,7 +22,7 @@ A repository to keep all the projects that implemented from individual students 
     3.  Navigate to https://github.com/aksht94/UdacityOpenSource
     4.  Fork the repo
     5. Close the browser
-    6.	Make a folder with the name that is used in slack
+    6.	Make a folder with the name that is used in slack(If you are a group name your folder as your project and add a README file with all the participants)
     7.	Copy all the files and folders that you want to upload inside that folder
     8.	Open terminal
     9.	Navigate to the downloads folder in your terminal: cd /path/to/downloads
