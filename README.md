@@ -22,7 +22,7 @@ A repository to keep all the projects that implemented from individual students 
     3.  Navigate to https://github.com/aksht94/UdacityOpenSource
     4.  Fork the repo
     5. Close the browser
-    6.	Make a folder with the name that is used in slack
+    6.	Make a folder with the name that is used in slack(If you are in a group, you have to name your folder as your project and add a README file with all the participants)
     7.	Copy all the files and folders that you want to upload inside that folder
     8.	Open terminal
     9.	Navigate to the downloads folder in your terminal: cd /path/to/downloads
@@ -42,6 +42,7 @@ A repository to keep all the projects that implemented from individual students 
     23.	Leave a comment, that you are from udacity’s facebook challenge
     24.	We will review your files and we will accept the request if everything is ok. If not, we will let you know the reason your request is rejected
     25.	DONE!
+
 
 4.	Optional – Star the repo
     1.	Open your browser
