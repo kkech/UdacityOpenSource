@@ -31,7 +31,7 @@ A repository to keep all the projects that implemented from individual students 
     12.	Copy the folder with your name that you created in step 1 to the UdacityOpenSource folder. You can do this through UI. The UdacityOpenSource folder that is created with git clone command is located in your Downloads folder
     13.	Go to the terminal again
     14.	Then make a new branch with the name that is used in slack: git checkout -b [slackName]
-    15. git pull origin master
+    15. Get all the new files from origin: git pull origin master
     16.	Add all the new files: git add –-all
     17.	Commit your changes: git commit -m "Upload my files"
     18.	Upload your changes to the repo: git push origin [slackName]. If you are asked for your credentials, add your github account credentials.
