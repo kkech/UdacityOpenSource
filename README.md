@@ -50,6 +50,8 @@ A repository to keep all the projects that implemented from individual students 
     3.	Press the start at the upper right corner
     4.	DONE!
 
+For Evaluation Criteria click [here](https://sites.google.com/udacity.com/secureprivateai-challenge/community/project-showcase-challenge?authuser=0#h.p_E1Kba6yZtw4O)
+
 Furthermore, I made a video demonstrating the whole process of uploading my project to GitHub. You can find the video [here](https://youtu.be/FwjrbVqdZyE).
 
 If you want any help you can contact me directly in slack. My slack name is kkech.
