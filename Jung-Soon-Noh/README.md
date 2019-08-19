@@ -11,12 +11,12 @@ models, called "teachers" (sensitive models are trained directly on labeled sens
 will be used for training another public model on unlabeled public data, <br/>
 
 <p>We will be using MNIST handwritten digits dataset which consists of 60,000 examples of trainset and 10,000<br/> 
-examples of testset. In applying DP, training datasets must be disjoint to preserve the privacy of individual data.<br/>
+examples of testset. For training teacher models, data must be disjoint to preserve the privacy of individual data.<br/>
 Therefore, I made disjoint subsets of the MNIST trainset by number of teachers (10, 50, 100) for teacher-model<br/>
 training. For prediction on student dataset, 6,000 examples of unlabeled MNIST testset was used. <br/>
 
-<p>To train multiple teacher models, get_teacher_preds(num_teachers, num_examples, epochs) function was written.<br/>
-If you wish, you can test any number of teachers-model with this function. I thought it would be good to save <br/>
+<p>To get teachers' prediction, get_teacher_preds(num_teachers, num_examples, epochs) function was written.<br/>
+If you wish, you can play with this function for multiple teacher-models. I thought it would be good to save <br/>
 predictions for use in case of kernel restart or a new session after the completion of training and prediction  <br/>
 so that I can skip retraining process. Therefore, I started with making a new directory to contain prediction files<br/>
 for each teacher model.<p>
@@ -38,9 +38,9 @@ The input parameters of PATE are:<br/>
 - epsilon (privacy loss level)<br/>
 - delta (probability that epsilon breaks)<br/>
 
-<p>The output of PATE analysis are: <br/>
+The output of PATE analysis are: <br/>
 - Data-independent epsilon: privacy loss in the worst case<br/>
-- Data-dependent epsilon: a tight bound of privacy loss based on real values of teacher models' outputs.<p>
+- Data-dependent epsilon: a tight bound of privacy loss based on real values of teacher models' outputs.<br/>
     
 It seems that the upper limit of epsilon value is 0.2 in case of MINIST dataset. When performing PATE analysis<br/>
 for epsilon values of 0.3 and above, I got warning message that the epsilon value is too large to compute<br/>
