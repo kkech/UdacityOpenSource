@@ -61,7 +61,7 @@ Have a look here to see the implementation of the project in different ways:
 - What does it mean to train a Neural Network? Read article [here](https://medium.com/@mikaelaysanchez/what-does-it-mean-to-train-a-neural-network-64065fbc7bb0)
 ***
 ### Shortcut to command line
-Want a quick guide for the command line commands used? Have a look [here](https://github.com/shashigharti/federated-learning-on-raspberry-pi/tree/master/command-line).
+Want a quick guide for the command line commands used? Have a look [here](https://github.com/shashigharti/federated-learning-on-raspberry-pi/tree/master/Command%20Line)
 ***
 ### Topics
    - [PySyft](https://github.com/OpenMined/PySyft)
