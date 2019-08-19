@@ -1,5 +1,0 @@
-$ export NO_CUDA=1
-$ export NO_DISTRIBUTED=1
-$ export NO_MKLDNN=1
-$ export NO_NNPACK=1
-$ export NO_QNNPACK=1
