@@ -7,6 +7,26 @@
 - The training was performed on the above dataset using SMPC with PySyft's `share` function.
 - The prediction is then done on the client side by importing the encrypted model and using it to predict the grade for the input essay (after encrypting the essay).
 ---
+
+## Website ScreenShots
+
+<img src="https://github.com/mankadronit/UdacityOpenSource/blob/Ronit/Ronit/assets/SC1.png" width="100%">
+
+
+
+<img src="https://github.com/mankadronit/UdacityOpenSource/blob/Ronit/Ronit/assets/SC2.png" width="100%">
+
+
+
+<img src="https://github.com/mankadronit/UdacityOpenSource/blob/Ronit/Ronit/assets/SC3.png" width="100%">
+
+
+## Model Description
+The model used is an LSTM network followed by a a fully connected Dense layer with 1 output nodes. 
+
+<img src="https://github.com/mankadronit/UdacityOpenSource/blob/Ronit/Ronit/assets/lstm.png" width="100%">
+
+
 ## Key Takeaways
 - Secure Multi Party Computation is a game changer in the Machine Learning as a service field (MaaS).
 - SMPC paired with Differential Privacy can revolutionalize services like medicine prescription.
@@ -67,19 +87,6 @@ model = model.fix_precision().share(*workers, crypto_provider=crypto_provider, r
 
 ```
 
-## Website ScreenShots
-
-<img src="https://github.com/mankadronit/UdacityOpenSource/blob/Ronit/Ronit/assets/SC1.png" width="100%">
-
-
-
-<img src="https://github.com/mankadronit/UdacityOpenSource/blob/Ronit/Ronit/assets/SC2.png" width="100%">
-
-
-
-<img src="https://github.com/mankadronit/UdacityOpenSource/blob/Ronit/Ronit/assets/SC3.png" width="100%">
-
-
 ## Tools Used
 > ⚠️ **Note**: The model in this repo was 
 coded with Keras for demonstration purposes. A production version will be made using Pytorch and PySyft. This repo doesn't contain the code for the encryption process.
@@ -99,12 +106,6 @@ pip install pandas
 pip install numpy 
 pip install nltk
 ```
-
-### Model Description
-The model used is an LSTM network followed by a a fully connected Dense layer with 1 output nodes. 
-
-<img src="https://github.com/mankadronit/UdacityOpenSource/blob/Ronit/Ronit/assets/lstm.png" width="100%">
-
 
 ### Performance
 The accuracy is calculated by **Quadratic Weighted Kappa(QWK)**, which measures the agreement between two raters. The model architecture consists of 2 Long Short Term Memory(LSTM) layers with a Dense output layer. The final layer uses the Relu activation function. The QWK is calculated by training model on the dataset using 5-Fold Cross Validation and taking the average for all five folds.
