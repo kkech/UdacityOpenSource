@@ -1,0 +1,2 @@
+DRAGONFIRE_DIR=/usr/share/dragonfire
+rm -rf $DRAGONFIRE_DIR
