@@ -1,0 +1,22 @@
+
+{% extends 'common.html' %}
+{% load static %}
+
+{% block head %}
+<title>Home</title>
+{% endblock %}
+
+
+  {% block content %}
+<body style="background-image:url({% static 'images/download.jpeg'%});">
+    <div>
+
+       {% if user.is_authenticated %}
+        <p ><h3>welcome : {{ user.username }}</h3></p>
+        <p><h4>Name: {{ user.firstname }}</h4>
+        {% else %}
+        <p ><h1>unauthorised access</h1></p>
+        {% endif %}
+    </div>
+</body>
+{% endblock %} 
