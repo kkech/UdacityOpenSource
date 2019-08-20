@@ -1,0 +1,46 @@
+import cv2
+import numpy as np
+from cv2 import VideoWriter, VideoWriter_fourcc
+
+# Capture from video
+cap = cv2.VideoCapture("videos/VideoII.mp4")
+
+# Capture from webcam
+#cap = cv2.VideoCapture(0)
+fourcc = VideoWriter_fourcc(*'MP42')
+video = VideoWriter('./detection.avi', fourcc, float(24), (1280, 720))
+
+while True:
+    ret, frame = cap.read()
+
+    # if we are viewing a video and we did not grab a frame,
+    # then we have reached the end of the video
+    if frame is None:
+        break
+
+    blurred_frame = cv2.GaussianBlur(frame, (5, 5), 0)
+    hsv = cv2.cvtColor(blurred_frame, cv2.COLOR_BGR2HSV)
+
+    # Red color
+    low_red = np.array([161, 155, 84])
+    high_red = np.array([179, 255, 255])
+    mask = cv2.inRange(hsv, low_red, high_red)
+    # red = cv2.bitwise_and(frame, frame, mask=red_mask)
+
+    contours, _ = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+
+    for contour in contours:
+        cv2.drawContours(frame, contour, -1, (0, 255, 0), 3)
+    mframe = cv2.cvtColor(mask, cv2.COLOR_GRAY2RGB)
+    rMask = cv2.resize(mframe, (400, 400), interpolation=cv2.INTER_AREA)
+
+    cv2.imshow("Frame", frame)
+    cv2.imshow("Mask", rMask)
+    video.write(mframe)
+    key = cv2.waitKey(25)
+    if key == 27:
+        break
+
+cap.release()
+video.release()
+cv2.destroyAllWindows()

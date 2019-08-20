@@ -1,0 +1,1 @@
+web: gunicorn --worker-class eventlet -w 1 run_socketio_server:app
