@@ -1,0 +1,9 @@
+First of all download the yolo-coco folder from the drive
+
+https://drive.google.com/open?id=131VJyNBAjh3jr2pLd15Dxwk6gl-pbmkf
+
+Then for image run:
+python yolo.py --image images/baggage_claim.jpg --yolo yolo-coco
+
+For video run:
+python yolo_video.py --input videos/airport.mp4 --output output/airport_output.avi --yolo yolo-coco
