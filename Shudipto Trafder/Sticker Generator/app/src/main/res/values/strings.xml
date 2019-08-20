@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Sticker Generator </string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="title_activity_final">FinalActivity</string>
+    <string name="title_activity_about">App Details</string>
+    <string name="edit_hint">Number? (Default:16)</string>
+    <string name="about">An Android App where user can generate a grid of sticker image, and user can also save that image for further uses. In the backend gan model is used to generate new Images and by using rest api those images bring to android app.</string>
+</resources>

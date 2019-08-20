@@ -1,0 +1,5 @@
+1 First Import neccessary modules.
+2 make sure to set the path for style image and content image 
+you can use your own image too.
+3 if any error occur during execution just restart the notebook
+
