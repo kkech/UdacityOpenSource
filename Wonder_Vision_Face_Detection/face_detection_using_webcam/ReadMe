@@ -1,0 +1,7 @@
+ # (@Seeratpal K. Jaura )
+FACE DETECTION USING OPENCV AND PYTHON
+
+This detect_faces_video.py detect the faces via webcam 
+
+To run this file type :
+python detect_faces_video.py --prototxt deploy.prototxt.txt --model res10_300x300_ssd_iter_140000.caffemodel
