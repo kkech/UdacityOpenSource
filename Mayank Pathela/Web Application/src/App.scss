@@ -1,0 +1,169 @@
+// @import 'loaders.css/src/animations/pacman.scss'
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  background-color: #282c34;
+}
+
+.App-header {
+  background-color: #282c34;
+  flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  // padding-top: 10%;
+  transition: all 1s;
+  &__active {
+    transform: translateY(-3rem);
+    transition: all 1s;
+    min-height: 40vh;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.main-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+//** variables
+$background: #282c34;
+$text: #9c9c9c;
+$input-bg-color: #fff;
+$input-text-color: #a3a3a3;
+$button-bg-color: #7f8ff4;
+$button-text-color: #fff;
+
+//** root
+:root {
+  background: $background;
+  color: $text;
+  font: 1rem "PT Sans", sans-serif;
+}
+
+html,
+body,
+.container {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  // overflow: hidden;
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    color: $button-bg-color;
+  }
+}
+
+//** helper
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__item {
+    margin: 10rem;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+//** button
+.btn {
+  display: inline-block;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  transition: all 200ms ease-in;
+  cursor: pointer;
+
+  &--primary {
+    background: $button-bg-color;
+    color: $button-text-color;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    padding: 12px 36px;
+
+    &:hover {
+      background: darken($button-bg-color, 4%);
+    }
+
+    &:active {
+      background: $button-bg-color;
+      box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &--inside {
+    margin-top: 3rem;
+  }
+}
+
+//** form
+.form {
+  &__field {
+    width: 360px;
+    background: #fff;
+    color: $input-text-color;
+    font: inherit;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    border: 0;
+    outline: 0;
+    padding: 22px 18px;
+  }
+}
+
+// Loader
+.loader-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.sentiment-chart {
+  width: 100vw;
+  height: 400px;
+  display: flex;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__text {
+    font-size: 3rem;
+  }
+  &__images {
+    justify-content: space-evenly;
+    width: 100%;
+    display: flex;
+    padding: 2rem;
+  }
+  &__images img {
+    height: 5rem;
+    opacity: 0.15;
+  }
+  &__images .active {
+    opacity: 1;
+    transform: scale(1.4);
+    transition: all 1s;
+  }
+}
