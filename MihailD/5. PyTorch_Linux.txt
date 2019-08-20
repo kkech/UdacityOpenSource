@@ -1,0 +1,149 @@
+Tutorial for using C++ with PyTorch in Linux (Part 1)
+
+For each step I want an answer that you have succeeded or if you have not succeeded, tell that and we will help you.
+
+Steps:
+
+1. I have tested in a virtual machine Ubuntu 14.04. I do not think it matters so much.
+   So, do you have already a Linux OS ? Also, you can tell us what version of Linux do you have.
+
+1.1 How to have a virtual machine with Ubuntu ?
+      - Download Workstation 15 for Windows from here( you can also use VirtualBox): https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html
+      - Install it and then Run it.
+      - Download http://old-releases.ubuntu.com/releases/14.04.0/ubuntu-14.04-desktop-amd64.iso
+
+2.
+   2.1 Open your Linux.
+
+   2.2 Open a Terminal(Console). You just need one Terminal.
+
+   2.3 Write this to your Terminal: mkdir CppTorch
+
+   2.4 Write this to your Terminal: cd CppTorch
+
+3.
+   3.1 Open a browser in Linux.
+
+   3.2 Go to this website https://pytorch.org/
+
+   3.3 At Quick Start Locally:
+      3.3.1 At PyTorch Build click Stable(1.0)
+      3.3.2 At Your OS click Linux
+      3.3.3 At Package click LibTorch
+      3.3.4 At Language click C++
+      3.3.5 At CUDA click None
+      3.3.6 At Run this Command: we copy that link https://download.pytorch.org/libtorch/cpu/libtorch-shared-with-deps-latest.zip
+
+   3.4 Go again to the previous Terminal(from 2.4) and:
+       3.4.1 Run this: wget https://download.pytorch.org/libtorch/cpu/libtorch-shared-with-deps-latest.zip
+       3.4.2 Run this: sudo apt update && sudo apt upgrade && sudo apt install build-essential cmake unzip
+       3.4.3 Unzip it: unzip libtorch-shared-with-deps-latest.zip
+
+   3.5 Now we want to create a file named Linux_PyTorch.cpp, with some code and we will do like this:
+       3.5.1 Go again to the previous Terminal(from 2.4)
+       3.5.2 Run this: nano Linux_PyTorch.cpp
+       3.5.3 I hope it's working the 3.5.2 step for all of you.
+       3.5.4 An easy example of the the contents of Linux_PyTorch.cpp will be this(copy-paste):
+
+                  #include<torch/torch.h>
+                  #include<iostream>
+
+                  int main(){
+
+                  at::Tensor matrix = torch::rand({2,2});   // Here we create the matrix variable
+
+                  std::cout << matrix;   // Here we output the the content of matrix variable
+
+                  }
+
+        3.5.5 To save the content(source code), you will press Ctrl + x , then press y.
+        3.5.6 To be sure that you have saved the content in Linux_PyTorch.cpp please do this:
+                   cat Linux_PyTorch.cpp
+
+                    If you see the content, then you saved it successfully.
+
+   3.6 Now we will create another file, named CMakeLists.txt.
+      3.6.1 Go again to the previous Terminal(from 2.4)
+      3.6.2 Run this: nano CMakeLists.txt
+      3.6.3 The content for CMakeLists.txt will be this(copy-paste):
+
+                 cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
+                 project(Linux_PyTorch)
+
+                 find_package(Torch REQUIRED)
+
+                 add_executable(Linux_PyTorch Linux_PyTorch.cpp)
+                 target_link_libraries(Linux_PyTorch "${TORCH_LIBRARIES}")
+                 set_property(TARGET Linux_PyTorch PROPERTY CXX_STANDARD 11)
+
+      3.6.4 To save the content, you will press Ctrl + x , then press y.
+      3.6.5 To be sure that you have saved the content in CMakeLists.txt please do this:
+                  cat CMakeLists.txt
+
+                   If you see the content, then you saved it successfully.
+
+   3.7 In the same Terminal, create a directory with the name build like this:
+   
+   Tutorial for using C++ with PyTorch in Linux (Part 2)
+
+I get an error for the (Part 1) because the thread is too big, so I created another thread.
+
+  3.8
+     3.8.1 In your current directory from Terminal, write this command:
+              ls
+
+     3.8.2 In this moment, your current directory from Terminal should contains these:
+               CMakeLists.txt
+               Linux_PyTorch.cpp
+               build
+               libtorch
+
+  3.9 - You have seen in the content of CMakeLists.txt that we have this line:
+           cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
+
+         - That line means that we need to have a tool, named cmake, with a minimum version 3.0, else we will get an error.
+
+     3.9.1 To know what version of cmake do we have installed(or not), please write this command:
+               cmake --version
+
+     3.9.2 At me shows this: cmake version 3.13.2.
+
+               If, at you, shows a number greater than 3.0, then you will skip this entire 3.9 step and go to 3.10 step.
+
+               Else, it's no problem, I will help you to install cmake tool with version 3.13.2, which is bigger than 3.0. I did the same at me, because the first time I had a version less than 3.0.
+
+     3.9.3 If you have a version less then 3.0 or is not installed, by getting this message The program 'cmake' is currently not installed. You can install it by typing:, we will need to install cmake with version 3.13.2(this is just an example of version)
+
+     3.9.4 First, we neeed to remove the cmake tool, so please write this command:
+               sudo apt remove cmake
+     3.9.5 In Terminal go back to /CppTorch directory.
+     3.9.6 Create Cmake directory in the /CppTorch directory: mkdir Cmake
+     3.9.7 Go to /CppTorch/Cmake directory: cd Cmake
+     3.9.8 Open a browser and go to this link of cmake webpage: https://cmake.org/download/
+     3.9.9 Look at Latest Release (3.13.2) -> Platform -> Linux x86_64 ->  cmake-3.13.2-Linux-x86_64.sh
+     3.9.10 Copy the link of cmake-3.13.2-Linux-x86_64.sh
+     3.9.11 Now we will download the cmake-3.13.2-Linux-x86_64.sh file, so please write this:
+                 wget https://github.com/Kitware/CMake/releases/download/v3.13.2/cmake-3.13.2-Linux-x86_64.sh
+     3.9.12 Write this command: chmod +x cmake-3.13.2-Linux-x86_64.sh
+     3.9.13 Write this command: sudo ./cmake-3.13.2-Linux-x86_64.sh
+     3.9.14 If is asking your password, please write your password and press Enter.
+     3.9.15 Then you will see some text. Here is a tricky part.
+                  Keep pressing Enter till you see this text Do you accept the license ? [yN]:
+                  If you missed it, please try again 3.9.13 step.
+     3.9.16  Press y and press Enter.
+     3.9.17 Press Y and it will create for you a /CppTorch/cmake/cmake-3.13.2-Linux-x86_64 directory
+     3.9.18 Now we need to find the full path for /CppTorch/cmake/ , so please write this:
+                    pwd
+                 - At me, it is showing this: /home/mihail/CppTorch/Cmake/
+                 - This full path will help you at 3.9.19 step.
+     3.9.19 Next we need to create a Symbol link.
+                 Here, please be careful to write the full path(according to your path from 3.9.18 step) and please write this(this is at me):
+                 sudo ln -s /home/mihail/CppTorch/Cmake/cmake-3.13.2-Linux-x86_64/bin/ /usr/local/bin
+   3.10 In Terminal, please go to your build directory.
+
+   3.11 In terminal, write this, but please be careful to put YOUR FULL PATH for libtorch directory:
+            cmake -DCMAKE_PREFIX_PATH=/home/mihail/Desktop/CppTorch/libtorch ..
+
+   3.12 Please write this: make
+
+   3.13 Finally ! Please write this: ./Linux_PyTorch
