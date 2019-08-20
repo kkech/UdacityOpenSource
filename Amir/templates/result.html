@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			Encrypted ML Model Prediction
+		</div>
+		<h2>Email SPAM/HAM Detection</h2>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b>Results for SPAM/HAM Email Prediction</b></p>
+	<p> score < 0 is ham and score > 0 is spam</p>
+	<strong>decrypted prediction shown</strong>
+	<div class="results">
+	<bold>{{prediction}}</bold>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+open project folder in terminal
+pip install -r requirements.txt
+then
+download data from the text contains link under data folder
+then
+python app.py
