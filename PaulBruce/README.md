@@ -40,8 +40,6 @@ The idea for the app consists of 4 main screens:
 
 - Screen 4: there would always be a menu available to the user, where he/she could find information regarding the privacy techniques we have used to protect any diagnosis being made, and how the app works.
 
-In the next screenshots you can see a draft version of the result!
+In the next screenshots you can see a draft version of the result!     
 
-![Screenshot_1](screenshot1.jpg)
-![Screenshot_2](screenshot2.jpg)
-![Screenshot_3](screenshot3.jpg)
+<img src="screenshot1.jpg" width="280"/> <img src="screenshot2.jpg" width="280" /> <img src="screenshot3.jpg" width="280"/>
