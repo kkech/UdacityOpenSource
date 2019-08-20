@@ -1,0 +1,166 @@
+Tutorial for using C++ with PyTorch in Windows(Part 1)
+
+Steps:
+
+1. You need to have installed Visual Studio 2015 or 2017.
+     I think there will be no problems with other versions.
+     In this tutorial, I will use Windows 10 and Visual Studio 2015.
+
+2. Please create a folder, named Windows_PyTorch , where you want.
+     At me, the path will be that F:\PyTorch\Windows_PyTorch
+
+3.
+
+   3.1 Open a browser in Windows.
+
+   3.2 Go to this website https://pytorch.org/
+
+   3.3 At Quick Start Locally:
+
+      3.3.1 At PyTorch Build click Stable(1.0)
+      3.3.2 At Your OS click Windows
+      3.3.3 At Package click LibTorch
+      3.3.4 At Language click C++
+      3.3.5 At CUDA click None
+      3.3.6 At Run this Command:
+                - Please click https://download.pytorch.org/libtorch/cpu/libtorch-win-shared-with-deps-latest.zip
+
+   3.4 Download where you want. At me is F:\PyTorch\libtorch-win-shared-with-deps-latest.zip
+
+   3.5 Extract libtorch-win-shared-with-deps-latest.zip and at me will have this path F:\PyTorch\libtorch-win-shared-with-deps-latest
+
+ 4. Now we want to create a file named Windows_PyTorch.cpp, with some code and we will do like this:
+
+   4.1 Go again in your Windows_PyTorch folder.
+   4.2 Create a file named Windows_PyTorch.cpp
+   4.3 Open the Windows_PyTorch.cpp file with any Editor, like Notepad++.
+   4.4 An easy example of the the contents of Windows_PyTorch.cpp file will be this(copy-paste):
+
+                  #include<torch/torch.h>
+                  #include<iostream>
+
+                  int main(){
+
+                  at::Tensor matrix = torch::rand({2,2});   // Here we create the matrix variable
+
+                  std::cout << matrix;   // Here we output the the content of matrix variable
+
+                  }
+
+   4.5 - Save and exit from Windows_PyTorch.cpp file.
+          - At me, the full path is F:\PyTorch\Windows_PyTorch\Windows_PyTorch.cpp
+
+ 5. Now we will create another file, named CMakeLists.txt:
+
+   5.1 Go again in your Windows_PyTorch folder.
+   5.2 Create a file named CMakeLists.txt
+   5.3 The content for CMakeLists.txt will be this(copy-paste):
+
+           cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
+           project(PyTorch_Windows_Application)
+
+           find_package(Torch REQUIRED)
+
+           add_executable(Windows_PyTorch Windows_PyTorch.cpp)
+           target_link_libraries(Windows_PyTorch ${TORCH_LIBRARIES})
+           set_property(TARGET Windows_PyTorch PROPERTY CXX_STANDARD 11)
+
+   5.4 - Save and exit from CMakeLists.txt file.
+          - At me, the full path is F:\PyTorch\Windows_PyTorch\CMakeLists.txt
+
+ 6. - In Windows_PyTorch folder, please create a new folder named build
+     - At me, the full path is F:\PyTorch\Windows_PyTorch\build
+
+7. In this moment, your Windows_PyTorch folder should contains these:
+     build
+     CMakeLists.txt
+     Windows_PyTorch.cpp
+
+8. Now me need to install CMake for Windows:
+
+  8.1 Open a browser and go to this link of CMake webpage: https://cmake.org/download/
+  8.2 Look at Latest Release (3.13.2) -> Platform -> Windows win32-x86 ZIP
+  8.3 Click cmake-3.13.2-win32-x86.zip
+  8.4 Save cmake-3.13.2-win32-x86.zip in PyTorch folder.
+  8.5 Extract cmake-3.13.2-win32-x86.zip
+  8.6 At me, the full path is F:\PyTorch\cmake-3.13.2-win32-x86
+  
+:trophy::trophy::trophy: Tutorial for using C++ with PyTorch in Windows(Part 2) :trophy::trophy::trophy:
+
+
+9.  From this full path F:\PyTorch\cmake-3.13.2-win32-x86\cmake-3.13.2-win32-x86\bin
+
+   9.1 Open cmake-gui.exe . You should have another path. You will get a window with CMake.
+
+   9.2 At "Where is the source code", please write there the full path to your Windows_PyTorch folder.
+          At me is F:\PyTorch\Windows_PyTorch
+
+   9.3 At "Where to build the binaries", please write there the full path to your build folder.
+          At me is F:\PyTorch\Windows_PyTorch\build
+
+   9.4 Click the Configure button. You will get a new window:
+
+      9.4.1 At "Specify the generator for this project", please select your Visual Studio, like 14 2015, or 15 2017.
+                Don't choose those with Win64.
+
+      9.4.2 Click the Finish button. The window will be closed and you will see that is running something and you will get an error like "Error in configuration process, project files may be invalid".
+
+10. Remove all the files from your build folder.
+
+11.
+    11.1 Open an Command Prompt with Run as Administrator.
+    11.2 In Command Prompt, we need to go to build folder like this:
+          cd F:\PyTorch\Windows_PyTorch\build
+          F:
+	   
+    11.3 In Command Prompt, please write this, but change my full path with your full path for cmake.exe tool and libtorch folder. At me look like this(IT'S JUST ONE LINE):
+           F:\PyTorch\cmake-3.13.2-win32-x86\cmake-3.13.2-win32-x86\bin\cmake.exe -DCMAKE_PREFIX_PATH=F:\PyTorch\libtorch-win-shared-with-deps-latest\libtorch ..
+
+          - You should see something like this:
+
+            -- Building for: Visual Studio 14 2015
+            -- Selecting Windows SDK version  to target Windows 11.0.17134.
+            -- The C compiler identification is MSVC 111.0.24215.1
+            -- The CXX compiler identification is MSVC 111.0.24215.1
+            -- .............
+            -- Found torch: F:/PyTorch/libtorch-win-shared-with-deps-latest/libtorch/lib/torch.lib
+            -- Configuring done
+            -- Generating done
+            -- Build files have been written to: F:/PyTorch/Windows_PyTorch/build
+
+     11.4 If everything it's okay, in your build folder, you should have this:
+              CMakeFiles
+              ALL_BUILD.vcxproj
+              ALL_BUILD.vcxproj.filters
+              cmake_install.cmake
+              CMakeCache.txt
+              PyTorch_Windows_Application.sln
+              Windows_PyTorch.vcxproj
+              Windows_PyTorch.vcxproj.filters
+              ZERO_CHECK.vcxproj
+              ZERO_CHECK.vcxproj.filters
+
+  12 From build folder, open Windows_PyTorch.vcxproj file.
+
+  13.
+
+      13.1 In the right you have Solution Explorer and you will see this:
+              ALL_BUILD
+              Windows_PyTorch
+              ZERO_CHECK
+
+      13.2 Right click on Windows_PyTorch and click Set as StartUp Project.
+      13.3 Right click on Windows_PyTorch and click Build.
+               You should not have errors.
+      13.4 Press Ctrl + F5 and I hope you will not have an error.
+               If you have an error with missing .dll go to step 14, else don't go.
+
+  14.
+      14.1 From libtorch\lib folder ( at me is F:\PyTorch\libtorch-win-shared-with-deps-latest\libtorch\lib ), please copy these files c10.dll , caffe2.dll , libiomp5md.dll and torch.dll into Debug folder, where is Windows_PyTorch.exe file.
+               At me is F:\PyTorch\Windows_PyTorch\build\Debug
+
+    15.2  Finally, we write this Windows_PyTorch.exe and you will get something like this:
+
+             0.0665  0.2129
+             0.8933  0.4210
+            [ Variable[CPUFloatType]{2,2} ]
