@@ -1,0 +1,7 @@
+*.tar.gz
+*.mat
+Coco_Dataset/*
+MPII_Dataset/*
+*.zip
+trained_models/*
+*.pth
