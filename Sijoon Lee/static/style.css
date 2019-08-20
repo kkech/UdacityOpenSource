@@ -1,0 +1,27 @@
+body{
+    text-align: center;
+}
+.panning-row{
+    font-size: 1.4em;
+}
+.upper-row {
+    font-size: 1.6em;
+    
+}
+.prediction {
+    width:100%;
+    display:flex;
+    justify-content: center;
+}
+.two-columns-grid { 
+    width: 20%; 
+    box-sizing: border-box;
+    /*box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.1);*/ 
+    
+    /*border-collapse: collapse;*/ 
+    border-spacing: 0; 
+    /*background-color: #333333;*/ 
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 3px
+}

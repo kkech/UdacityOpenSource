@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Kingston Temperature Prediction</title>
+    
+    <link href="{{ url_for('static', filename='style.css')}}" rel="stylesheet" type = "text/css">
+
+
+  </head>
+
+  <body>
+
+    <div>
+        <div class = "upper-row">
+            <p>Temperature Prediction on Kingston, ON, CA</p>
+            <p>Local Date: {{year}}-{{month}}-{{day}}</p>
+        </div>
+        <hr>
+        <div class = "panning-row">
+            <p>Predicted Tommorow's Temperature</p>
+        </div>
+        <hr>
+        <div class="prediction">
+            <div class = "two-columns-grid">
+                <div><b>Time</b></div>
+                <div><b>Temp(°C)</b></div>
+                {% for idx in range(0, len) %}
+                <div>
+                    {{ "{:02d}".format(idx) }}
+                </div>
+                <div>
+                  {{ results[idx] }}
+                </div>
+                {% endfor %}
+
+            </div>
+            
+
+        </div>
+
+    </div>
+
+
+
+  </body>
+
+</html>
