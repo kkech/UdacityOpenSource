@@ -1,0 +1,27 @@
+This project is a cyber security project based on URL classifiction.
+In this project I have used machine learning and python to extract features from a URL which is required to classify the URL as benign or malicious according to the features.
+The code is written in python and utilizes scikit learn library for random forest algorithm use.
+The features that are extracted are Entropy of URL using Shannon's entropy formula, number of characters, special characters, google safe browsing api, number of digits, contains IP or not, popularity of the domain using most popular domains data set.
+In this project I didn't use pyTorch but I learned ML in addition, during the teaching of this course.
+
+I will not be sharing my code but I will add screenshots of the running model.
+
+As cyber security threats are increasing day by day and people become victiom of these because of malicious URLs, so this ML classifier has an accuracy of 85% to detect those URLs.
+
+Screenshots are attached for how the model works.
+
+It uses python 3.6 and
+
+numpy
+pandas
+urllib3
+requests
+argparse
+colored
+cprint
+colorama
+Counter
+scikit-learn
+termcolor
+
+In addition the data set is taken from kaggle and 10000 URLs have been used to extract features from them and train the model.

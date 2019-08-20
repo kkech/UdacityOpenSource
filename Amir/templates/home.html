@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			Encrypted ML Model Prediction
+		</div>
+		<h2>Email SPAM/HAM Detection</h2>
+		
+	</div>
+	</header>
+
+	<div class="ml-container">
+	<br>
+	<p>Copy Test Samples for Spam -
+	<ol> 
+	<li>Subject: hot jobs global marketing specialties po box 300 east amherst , ny 14051 this e - mail message is an advertisement and / or solicitation .</li>
+	<li>Subject: smoke 9885 cgfsaw 91 cmdaawlolmrlbw 9 rcmlob 3 muz 3 i = gary crew has used kim as one of the main characters to tell the story about the wild children . billy ' s papa tries to tell him that it is all for the best first confucianism deals with the rational cosmic order and the organization of worldly affairs . four modified varieties of this last " ( twain 8 ) .</li>
+	<li>Subject:  the only solution to penis enlargement nzzbqhbitmt lpktcwcmvgtg limited offer : add at least 3 inches or get your money back ! cfgduybiocan rhoxlibcauk we are so sure our product works we are willing to prove it by offering a free trial bottle + a 100 % money back guarantee upon purchase if you are not satisfied with the results . - - - > click here to learn more - - - also check out our * brand new * product : penis erection oil comes with the 100 % money back warranty as well ! koyvtsclnwdf cyynascqvqw xyvoqldtkmr ikoogybhmxdc ohdgnianbq hyxziccxes no more offers</li>
+	</ol>
+	<br>
+	<br>
+	<p>Copy Test Samples for Ham -
+	<ol>
+	<li>Subject: internal guest id and passowrd darren , you have been set up for an id and password for internal website access , at www . enrononline . com . your id and password is as follows : id : eol 76371 password : welcome ! please not that the id and password will need to be in all upper case . please feel free to contact me if you have any question or problems getting into the system . thanks tara x 34523 
+</li>
+	<li>Subject: decrease entex rom 142509 dth by 6 days = 855 , 054 67509 dth by 15 days = 1 , 012 , 635 total = 1 , 867 , 689 
+</li>
+	<li>Subject: re : document samantha , please schedule an interview with this candidate , mark mccoy 713 - 369 - 9281 for monday january 24 th . i would like him to interview with daren farmer , gary hanks , and yourself . i have already met with him outside of the office . he will also need some sort of briefing on benefits if that is possible . please let me know if this is ok . also keep in mind that he is currently employed and has limited flexibility . i believe that the date , january 24 th is a good day for him . i will be out of the office on jury duty but i don ' t think that will be a problem . thanks , pat clynes 35578 resume is attached . mmccoy 3617 @ aol . com on 01 / 16 / 2000 07 : 29 : 52 pm to : pat clynes / corp / enron @ enron cc : subject : document mr . clynes : here is the document you requested . let me know if you have any questions or require any additional information . sincerely , mark mccoy 713 / 369 - 9281 - mresume . doc 
+</li>
+</ol>
+<br>
+<br>
+<form action="{{ url_for('predict')}}" method="POST">
+		<p>Paste Your Email Here</p>
+		<!-- <input type="text" name="comment"/> -->
+		<textarea name="comment" rows="4" cols="50"></textarea>
+		<br/>
+		<input type="submit" class="btn-info" value="predict">
+.	</form>
+	</div>
+</body>
+</html>
+
