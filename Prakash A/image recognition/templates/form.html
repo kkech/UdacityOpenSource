@@ -1,0 +1,97 @@
+<html>
+    <head>
+    <title>user interface</title>
+	<style>
+body{
+background-image: url("/static/images/img2.jpg");
+}
+
+.container-contact2 {
+  width: 100%;  
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  background: rgba(219,21,99,0.8);
+  background: -webkit-linear-gradient(45deg, rgba(50,205,50,0.8), rgba(34,139,34,0.8));
+  background: -o-linear-gradient(45deg, rgba(50,205,50,0.8), rgba(34,139,34,0.8));
+  background: -moz-linear-gradient(45deg, rgba(50,205,50,0.8), rgba(34,139,34,0.8));
+  background: linear-gradient(45deg, rgba(50,205,50,0.8), rgba(34,139,34,0.8));
+}
+.wrap-contact2 {
+  width: 790px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 72px 55px 90px 55px;
+}
+
+.contact2-form {
+  width: 100%;
+}
+
+.contact2-form-title {
+  display: block;
+  font-family: Poppins-Bold;
+  font-size: 39px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+  padding-bottom: 65px;
+}
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  padding-bottom: 20px;
+}
+
+input[type=text]:focus {
+  border: 3px solid blue;
+}
+
+.button{
+color: white;
+background-color: green;
+width:100px;
+height:50px;
+border: none;
+}
+.button:hover {
+box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+</style>
+	</head>
+	
+<body>
+<div class="container-contact2">
+<div class="wrap-contact2">
+<span class="contact2-form-title">
+						fill the details
+					</span>
+   
+   <form action="/home" method="POST">
+ 
+	<input type="text" name="greet" placeholder="Enter Path/Filename">
+
+<br>
+<center>
+<input type="submit" class="button">
+</center>
+</form>
+</div>
+</div>
+</body>
+</html>
