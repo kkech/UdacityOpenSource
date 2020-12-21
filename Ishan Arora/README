@@ -1,0 +1,15 @@
+This project consists of Generating Fake Images Using PyTorch
+
+Basically We have 2 functions-
+
+Classifier
+Generator
+
+Classifier classify the images as real or fake and the generator helps to geenrate the fake images.
+We will train both the models.
+We will be using GAN for our project.
+
+
+TEAM MEMBERS:
+Ishan Arora
+Sanaklp Dayal

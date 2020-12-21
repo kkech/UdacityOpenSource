@@ -1,0 +1,8 @@
+numpy==1.16.2
+Flask_RESTful==0.3.7
+torch==1.1.0
+timezonefinder==4.1.0
+pytz==2018.7
+Flask==1.0.2
+pandas==0.23.4
+gunicorn==19.9.0

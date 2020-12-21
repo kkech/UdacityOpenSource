@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Private AI</string>
+    <string name="large_text">
+        "Are you ready to test your knowledge of three cutting-edge technologies for privacy-preserving AI:
+        1. Federated Learning
+        2. Differential Privacy
+        3. Encrypted Computation\n\n"
+
+        "Let's get started."
+
+    </string>
+    <string name="no_connection">"No Internet Connection"</string>
+    <string name="exit">"You need to have Internet Connection to access app. Press ok to Exit"</string>
+    <string name="action_settings">Settings</string>
+</resources>

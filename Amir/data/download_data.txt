@@ -1,0 +1,2 @@
+https://iamtrask.github.io/data/ham.txt
+https://iamtrask.github.io/data/spam.txt

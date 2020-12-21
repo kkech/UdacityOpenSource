@@ -1,0 +1,39 @@
+Input :  wir sind noch nicht ganz fertig .
+Target:  we re not totally ready yet .
+Output:  we re not all finished yet .
+
+Input :  ich bin sonntags nicht zu hause .
+Target:  i m not home on sundays .
+Output:  i m not home on sundays .
+
+Input :  ich bin unverheiratet .
+Target:  i m not married .
+Output:  i m not married .
+
+Input :  ich lerne maschineschreiben .
+Target:  i m learning how to type .
+Output:  i m studying how to type .
+
+Input :  ich bin nicht mehr hungrig .
+Target:  i m not hungry anymore .
+Output:  i m not hungry anymore .
+
+Input :  sie furchten sich nicht vor schwerer arbeit .
+Target:  they re not afraid of hard work .
+Output:  they re not afraid of hard work .
+
+Input :  ich uberfliege gerade seinen bericht .
+Target:  i m skimming his report right now .
+Output:  i m skimming his report right now .
+
+Input :  ich werde oft mit meinem bruder verwechselt .
+Target:  i m often mistaken for my brother .
+Output:  i m often mistaken for my brother .
+
+Input :  Ich bin froh, bei dir zu sein.
+Target:  i am glad to be with you .
+Output:  i am glad i am with you .
+
+Input :  er ist ein kluges kerlchen .
+Target:  he s a smart little feller .
+Output:  he s a smart little life .

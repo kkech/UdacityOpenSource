@@ -1,0 +1,58 @@
+dragonfire (1.0.0) unstable; urgency=medium
+
+  * Post-installation scripts are fixed
+  * An API implemented
+  * The project is turned into more of a server-side application although it's continuing to preserve the features of its desktop application aspect
+  * The package is now Python 3 only
+  * Universal Python wheel generation disabled
+  * Basic Analyzer (done in dragonfire/__init__.py) is heavily pruned and improved. Now it's purely spaCy based
+  * Omniscient and Learner classes are refactored
+  * Learning ability now can store data (that comes from many different Android users) on MySQL database seamlessly
+  * Gspeech alternative added
+
+ -- Mehmet Mert Yildiran <mehmetmertyildiran@gmail.com>  Tue, 19 Jun 2018 01:57:10 +0300
+
+dragonfire (0.9.9) unstable; urgency=medium
+
+  * Twitter integration implemented
+  * Ability to answer arithmetic questions added
+  * A fourth way to respond, Deep Conversation system added
+
+ -- Mehmet Mert Yildiran <mehmetmertyildiran@gmail.com>  Sat, 12 May 2018 14:59:20 +0000
+
+dragonfire (0.9.8) unstable; urgency=medium
+
+  * Migrated from Kaldi Speech Recognition Toolkit to Mozilla DeepSpeech
+  * Python3 compatibility improved
+  * System tray icon is now GTK+ based instead of wxPython
+
+ -- Mehmet Mert Yildiran <mehmetmertyildiran@gmail.com>  Thu, 26 Apr 2018 21:33:21 +0000
+
+dragonfire (0.9.7) unstable; urgency=medium
+
+  * Python3 support added
+  * Omniscient Q&A Engine success rate is improved by ~40%
+  * The learning capabilities are improved by including the inverted case
+  * Wikipedia connection and disambiguation errors are fixed
+  * Several minor bugs are fixed
+  * Missing package dependencies are added
+  * Post-installation scripts are fixed
+
+ -- Mehmet Mert Yildiran <mehmetmertyildiran@gmail.com>  Sat, 28 Oct 2017 02:39:47 +0000
+
+dragonfire (0.9.6) unstable; urgency=medium
+
+  * Migrated from PyPI SpeechRecognition package to Kaldi Speech Recognition Toolkit
+  * Migrated from festival cmu_us_clb_arctic voice to flite slt voice
+  * Kaldi GStreamer English model is added
+  * Google Search built-in commands are added
+  * Several minor bugs are fixed
+  * A number of experimental(non-functional) scripts are added
+
+ -- Mehmet Mert Yildiran <mehmetmertyildiran@gmail.com>  Mon, 16 Oct 2017 21:57:32 +0000
+
+dragonfire (0.9.5) unstable; urgency=medium
+
+  * Initial release (Closes: #869121)
+
+ -- Mehmet Mert Yildiran <mehmetmertyildiran@gmail.com>  Mon, 17 Jul 2017 22:20:48 +0000

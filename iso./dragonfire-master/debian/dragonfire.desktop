@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0.0
+Type=Application
+Name=Dragonfire
+Comment=Virtual Assistant for Linux
+Exec=dragonfire
+Categories=Utility;
+# desktop should run this in a terminal application
+Terminal=false
+StartupNotify=true
+StartupWMClass=dragonfire
+Icon=dragonfire_icon.png
