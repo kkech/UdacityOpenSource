@@ -2,4 +2,4 @@ numpy
 Flask==1.1.1
 gunicorn==19.9.0
 http://download.pytorch.org/whl/cpu/torch-1.1.0-cp36-cp36m-linux_x86_64.whl
-Pillow==6.0.0
+Pillow==9.0.0
